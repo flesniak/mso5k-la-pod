@@ -9,7 +9,6 @@ The schematic and PCB is in kicad 5 format.
 
 * I belive the schematic pretty closely matches the original pod.
 * I have not yet laid out a PCB.
-* The output resistors of the comperators need to be changed to resistor arrays.
 
 # PCB
 
