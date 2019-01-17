@@ -453,116 +453,116 @@ Wire Wire Line
 	3800 4550 3650 4550
 Wire Wire Line
 	3650 4450 3800 4450
-Text GLabel 4550 4400 0    50   Input ~ 0
+Text GLabel 4500 4400 0    50   Input ~ 0
 In8
-Text GLabel 4550 4550 0    50   Input ~ 0
+Text GLabel 4500 4550 0    50   Input ~ 0
 In9
 Wire Wire Line
-	4550 4400 4700 4400
+	4500 4400 4650 4400
 Wire Wire Line
-	4550 4550 4700 4550
-Text GLabel 4550 5700 0    50   Input ~ 0
+	4500 4550 4650 4550
+Text GLabel 4500 5700 0    50   Input ~ 0
 In10
-Text GLabel 4550 5850 0    50   Input ~ 0
+Text GLabel 4500 5850 0    50   Input ~ 0
 In11
 Wire Wire Line
-	4700 5700 4550 5700
+	4650 5700 4500 5700
 Wire Wire Line
-	4700 5850 4550 5850
-Text GLabel 5400 4700 2    50   Input ~ 0
+	4650 5850 4500 5850
+Text GLabel 5350 4700 2    50   Input ~ 0
 D9
-Text GLabel 5400 4800 2    50   Input ~ 0
+Text GLabel 5350 4800 2    50   Input ~ 0
 ~D9
-Text GLabel 5400 4450 2    50   Input ~ 0
+Text GLabel 5350 4450 2    50   Input ~ 0
 D8
-Text GLabel 5400 4550 2    50   Input ~ 0
+Text GLabel 5350 4550 2    50   Input ~ 0
 ~D8
-Text GLabel 5400 6000 2    50   Input ~ 0
+Text GLabel 5350 6000 2    50   Input ~ 0
 D11
-Text GLabel 5400 6100 2    50   Input ~ 0
+Text GLabel 5350 6100 2    50   Input ~ 0
 ~D11
-Text GLabel 5400 5750 2    50   Input ~ 0
+Text GLabel 5350 5750 2    50   Input ~ 0
 D10
-Text GLabel 5400 5850 2    50   Input ~ 0
+Text GLabel 5350 5850 2    50   Input ~ 0
 ~D10
 Wire Wire Line
-	5400 6100 5250 6100
+	5350 6100 5200 6100
 Wire Wire Line
-	5250 6000 5400 6000
+	5200 6000 5350 6000
 Wire Wire Line
-	5400 5850 5250 5850
+	5350 5850 5200 5850
 Wire Wire Line
-	5250 5750 5400 5750
+	5200 5750 5350 5750
 Wire Wire Line
-	5400 4800 5250 4800
+	5350 4800 5200 4800
 Wire Wire Line
-	5250 4700 5400 4700
+	5200 4700 5350 4700
 Wire Wire Line
-	5400 4550 5250 4550
+	5350 4550 5200 4550
 Wire Wire Line
-	5250 4450 5400 4450
-Text GLabel 6350 4400 0    50   Input ~ 0
+	5200 4450 5350 4450
+Text GLabel 6050 4400 0    50   Input ~ 0
 In12
-Text GLabel 6350 4550 0    50   Input ~ 0
+Text GLabel 6050 4550 0    50   Input ~ 0
 In13
 Wire Wire Line
-	6350 4400 6500 4400
+	6050 4400 6200 4400
 Wire Wire Line
-	6350 4550 6500 4550
-Text GLabel 6350 5700 0    50   Input ~ 0
+	6050 4550 6200 4550
+Text GLabel 6050 5700 0    50   Input ~ 0
 In14
-Text GLabel 6350 5850 0    50   Input ~ 0
+Text GLabel 6050 5850 0    50   Input ~ 0
 In15
 Wire Wire Line
-	6500 5700 6350 5700
+	6200 5700 6050 5700
 Wire Wire Line
-	6500 5850 6350 5850
-Text GLabel 7200 4700 2    50   Input ~ 0
+	6200 5850 6050 5850
+Text GLabel 6900 4700 2    50   Input ~ 0
 D13
-Text GLabel 7200 4800 2    50   Input ~ 0
+Text GLabel 6900 4800 2    50   Input ~ 0
 ~D13
-Text GLabel 7200 4450 2    50   Input ~ 0
+Text GLabel 6900 4450 2    50   Input ~ 0
 D12
-Text GLabel 7200 4550 2    50   Input ~ 0
+Text GLabel 6900 4550 2    50   Input ~ 0
 ~D12
-Text GLabel 7200 6000 2    50   Input ~ 0
+Text GLabel 6900 6000 2    50   Input ~ 0
 D15
-Text GLabel 7200 6100 2    50   Input ~ 0
+Text GLabel 6900 6100 2    50   Input ~ 0
 ~D15
-Text GLabel 7200 5750 2    50   Input ~ 0
+Text GLabel 6900 5750 2    50   Input ~ 0
 D14
-Text GLabel 7200 5850 2    50   Input ~ 0
+Text GLabel 6900 5850 2    50   Input ~ 0
 ~D14
 Wire Wire Line
-	7200 6100 7050 6100
+	6900 6100 6750 6100
 Wire Wire Line
-	7050 6000 7200 6000
+	6750 6000 6900 6000
 Wire Wire Line
-	7200 5850 7050 5850
+	6900 5850 6750 5850
 Wire Wire Line
-	7050 5750 7200 5750
+	6750 5750 6900 5750
 Wire Wire Line
-	7200 4800 7050 4800
+	6900 4800 6750 4800
 Wire Wire Line
-	7050 4700 7200 4700
+	6750 4700 6900 4700
 Wire Wire Line
-	7200 4550 7050 4550
+	6900 4550 6750 4550
 Wire Wire Line
-	7050 4450 7200 4450
+	6750 4450 6900 4450
 Text GLabel 1450 6050 0    50   Input ~ 0
 Vref_0-7
 Text GLabel 2950 6050 0    50   Input ~ 0
 Vref_0-7
 Wire Wire Line
 	3100 6050 2950 6050
-Text GLabel 4550 6050 0    50   Input ~ 0
+Text GLabel 4500 6050 0    50   Input ~ 0
 Vref_8-15
-Text GLabel 6350 6050 0    50   Input ~ 0
+Text GLabel 6050 6050 0    50   Input ~ 0
 Vref_8-15
 Wire Wire Line
-	6350 6050 6500 6050
+	6050 6050 6200 6050
 Wire Wire Line
-	4700 6050 4550 6050
+	4650 6050 4500 6050
 Text Notes 1050 3950 0    50   ~ 0
 For reference see:\nhttp://www.eevblog.com/forum/testgear/hacking-the-rigol-mso5000-series-oscilloscopes/msg2057401/#msg2057401 
 $Comp
@@ -780,67 +780,67 @@ F7 "OutB" I R 3650 6000 50
 F8 "~OutB" I R 3650 6100 50 
 $EndSheet
 $Sheet
-S 4700 5600 550  650 
+S 4650 5600 550  650 
 U 5C4E2524
 F0 "ch 10-11" 50
 F1 "dual.sch" 50
-F2 "InB" I L 4700 5850 50 
-F3 "Vref" I L 4700 6050 50 
-F4 "OutA" I R 5250 5750 50 
-F5 "~OutA" I R 5250 5850 50 
-F6 "InA" I L 4700 5700 50 
-F7 "OutB" I R 5250 6000 50 
-F8 "~OutB" I R 5250 6100 50 
+F2 "InB" I L 4650 5850 50 
+F3 "Vref" I L 4650 6050 50 
+F4 "OutA" I R 5200 5750 50 
+F5 "~OutA" I R 5200 5850 50 
+F6 "InA" I L 4650 5700 50 
+F7 "OutB" I R 5200 6000 50 
+F8 "~OutB" I R 5200 6100 50 
 $EndSheet
 $Sheet
-S 4700 4300 550  650 
+S 4650 4300 550  650 
 U 5C4E98BE
 F0 "ch 8-9" 50
 F1 "dual.sch" 50
-F2 "InB" I L 4700 4550 50 
-F3 "Vref" I L 4700 4750 50 
-F4 "OutA" I R 5250 4450 50 
-F5 "~OutA" I R 5250 4550 50 
-F6 "InA" I L 4700 4400 50 
-F7 "OutB" I R 5250 4700 50 
-F8 "~OutB" I R 5250 4800 50 
+F2 "InB" I L 4650 4550 50 
+F3 "Vref" I L 4650 4750 50 
+F4 "OutA" I R 5200 4450 50 
+F5 "~OutA" I R 5200 4550 50 
+F6 "InA" I L 4650 4400 50 
+F7 "OutB" I R 5200 4700 50 
+F8 "~OutB" I R 5200 4800 50 
 $EndSheet
 $Sheet
-S 6500 4300 550  650 
+S 6200 4300 550  650 
 U 5C4E98C7
 F0 "ch 12-13" 50
 F1 "dual.sch" 50
-F2 "InB" I L 6500 4550 50 
-F3 "Vref" I L 6500 4750 50 
-F4 "OutA" I R 7050 4450 50 
-F5 "~OutA" I R 7050 4550 50 
-F6 "InA" I L 6500 4400 50 
-F7 "OutB" I R 7050 4700 50 
-F8 "~OutB" I R 7050 4800 50 
+F2 "InB" I L 6200 4550 50 
+F3 "Vref" I L 6200 4750 50 
+F4 "OutA" I R 6750 4450 50 
+F5 "~OutA" I R 6750 4550 50 
+F6 "InA" I L 6200 4400 50 
+F7 "OutB" I R 6750 4700 50 
+F8 "~OutB" I R 6750 4800 50 
 $EndSheet
 $Sheet
-S 6500 5600 550  650 
+S 6200 5600 550  650 
 U 5C4E98D0
 F0 "ch 14-15" 50
 F1 "dual.sch" 50
-F2 "InB" I L 6500 5850 50 
-F3 "Vref" I L 6500 6050 50 
-F4 "OutA" I R 7050 5750 50 
-F5 "~OutA" I R 7050 5850 50 
-F6 "InA" I L 6500 5700 50 
-F7 "OutB" I R 7050 6000 50 
-F8 "~OutB" I R 7050 6100 50 
+F2 "InB" I L 6200 5850 50 
+F3 "Vref" I L 6200 6050 50 
+F4 "OutA" I R 6750 5750 50 
+F5 "~OutA" I R 6750 5850 50 
+F6 "InA" I L 6200 5700 50 
+F7 "OutB" I R 6750 6000 50 
+F8 "~OutB" I R 6750 6100 50 
 $EndSheet
 Text GLabel 2950 4750 0    50   Input ~ 0
 Vref_0-7
 Wire Wire Line
 	2950 4750 3100 4750
-Text GLabel 4550 4750 0    50   Input ~ 0
+Text GLabel 4500 4750 0    50   Input ~ 0
 Vref_8-15
 Wire Wire Line
-	4550 4750 4700 4750
-Text GLabel 6350 4750 0    50   Input ~ 0
+	4500 4750 4650 4750
+Text GLabel 6050 4750 0    50   Input ~ 0
 Vref_8-15
 Wire Wire Line
-	6350 4750 6500 4750
+	6050 4750 6200 4750
 $EndSCHEMATC

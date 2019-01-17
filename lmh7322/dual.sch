@@ -1451,31 +1451,6 @@ Text HLabel 6950 4550 2    50   Input ~ 0
 OutB
 $Comp
 L power:GND #PWR?
-U 1 1 5C467B73
-P 4900 5250
-AR Path="/5C467B73" Ref="#PWR?"  Part="1" 
-AR Path="/5C4819A8/5C467B73" Ref="#PWR?"  Part="1" 
-AR Path="/5C4C51E0/5C467B73" Ref="#PWR?"  Part="1" 
-AR Path="/5C4E887D/5C467B73" Ref="#PWR?"  Part="1" 
-AR Path="/5C4EBCE6/5C467B73" Ref="#PWR?"  Part="1" 
-AR Path="/5C43A963/5C467B73" Ref="#PWR?"  Part="1" 
-AR Path="/5C414CC7/5C467B73" Ref="#PWR039"  Part="1" 
-AR Path="/5C4B42BD/5C467B73" Ref="#PWR068"  Part="1" 
-AR Path="/5C4D3DE8/5C467B73" Ref="#PWR097"  Part="1" 
-AR Path="/5C4DB186/5C467B73" Ref="#PWR0126"  Part="1" 
-AR Path="/5C4E2524/5C467B73" Ref="#PWR0155"  Part="1" 
-AR Path="/5C4E98BE/5C467B73" Ref="#PWR0184"  Part="1" 
-AR Path="/5C4E98C7/5C467B73" Ref="#PWR0213"  Part="1" 
-AR Path="/5C4E98D0/5C467B73" Ref="#PWR0242"  Part="1" 
-F 0 "#PWR039" H 4900 5000 50  0001 C CNN
-F 1 "GND" H 4905 5077 50  0000 C CNN
-F 2 "" H 4900 5250 50  0001 C CNN
-F 3 "" H 4900 5250 50  0001 C CNN
-	1    4900 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
 U 1 1 5C467B79
 P 6050 5400
 AR Path="/5C467B79" Ref="#PWR?"  Part="1" 
@@ -1499,10 +1474,6 @@ F 3 "" H 6050 5400 50  0001 C CNN
 	1    6050 5400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5050 5250 5050 5200
-Wire Wire Line
-	4900 5200 4900 5250
 Text HLabel 6950 4650 2    50   Input ~ 0
 ~OutB
 $Comp
