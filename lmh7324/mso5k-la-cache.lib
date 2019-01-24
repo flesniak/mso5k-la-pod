@@ -272,11 +272,11 @@ X R8.2 9 300 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# lmh732x_lmh7324
+# mso5k-la-rescue_lmh7324-lmh732x
 #
-DEF lmh732x_lmh7324 IC 0 40 Y Y 4 F N
+DEF mso5k-la-rescue_lmh7324-lmh732x IC 0 40 Y Y 4 F N
 F0 "IC" 250 -200 50 H V C CNN
-F1 "lmh732x_lmh7324" 200 -100 50 H V C CNN
+F1 "mso5k-la-rescue_lmh7324-lmh732x" 200 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW

@@ -5,20 +5,32 @@ This is a reimplementation of the Logic Analyzer pod for the MSO5k scopes.
 The schematic and PCB is in kicad 5 format.
 
 
-# Current status / TODO
-
-* I belive the schematic pretty closely matches the original pod.
-* I have not yet laid out a PCB.
-
-# PCB
-
-The plan is to lay out a 2 layer PCB and accept that it will take up more space
+# Versions
 
 
-# Idea: Split pod into two 8-input podlets
+There are a number of versions each in its own subdir:
 
-I have been considering splitting the 16-input pod into two 8 port podlets in stead, that would give some advantages:
+## lmh7322
+* 16 channel frontend pod
+* Pretty close clone of the original
+* One-sided load
+* On a 4 layer board
+* Direct 2x50 2.54mm ribbon connector to the scope
+* Status: Done, except for silkscreen
 
-* The cables to the scope would be more flexible.
-* It would be easier to probe in two points.
-* If only one pod is needed, then it doesn't need to take up space on the table.
+## lmh7322-8ch
+* 8 channel frontend pod
+* Half the channels to make the ribbon smaller and nicer to work with.
+* One-sided load
+* On a 4 layer board
+* Status: Nope
+
+## lmh7324
+* 16 channel frontend pod
+* Using lmh7324 for greater density and lower cost.
+* One-sided load
+* On a 4 layer board
+* Status: Nope
+
+
+
