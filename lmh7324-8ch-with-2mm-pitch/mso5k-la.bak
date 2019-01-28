@@ -14,59 +14,70 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L power:GND #PWR0106
+U 1 1 5C3F979B
+P 1600 1400
+F 0 "#PWR0106" H 1600 1150 50  0001 C CNN
+F 1 "GND" V 1605 1272 50  0000 R CNN
+F 2 "" H 1600 1400 50  0001 C CNN
+F 3 "" H 1600 1400 50  0001 C CNN
+	1    1600 1400
+	0    1    1    0   
+$EndComp
 Text GLabel 2400 2300 2    50   Input ~ 0
 D7+
 Text GLabel 1600 2300 0    50   Input ~ 0
 D7-
-Text GLabel 2400 2400 2    50   Input ~ 0
+Text GLabel 1600 2400 0    50   Input ~ 0
 D6+
 $Comp
 L power:GND #PWR0109
 U 1 1 5C3F97D2
-P 2400 1200
-F 0 "#PWR0109" H 2400 950 50  0001 C CNN
-F 1 "GND" V 2405 1072 50  0000 R CNN
-F 2 "" H 2400 1200 50  0001 C CNN
-F 3 "" H 2400 1200 50  0001 C CNN
-	1    2400 1200
+P 2400 1400
+F 0 "#PWR0109" H 2400 1150 50  0001 C CNN
+F 1 "GND" V 2405 1272 50  0000 R CNN
+F 2 "" H 2400 1400 50  0001 C CNN
+F 3 "" H 2400 1400 50  0001 C CNN
+	1    2400 1400
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1600 2400 0    50   Input ~ 0
+Text GLabel 2400 2400 2    50   Input ~ 0
 D6-
-Text GLabel 2400 1700 2    50   Input ~ 0
+Text GLabel 2400 1800 2    50   Input ~ 0
 D5+
-Text GLabel 1600 1800 0    50   Input ~ 0
+Text GLabel 1600 1900 0    50   Input ~ 0
 D4+
 $Comp
 L power:GND #PWR0110
 U 1 1 5C3FA063
-P 1600 1900
-F 0 "#PWR0110" H 1600 1650 50  0001 C CNN
-F 1 "GND" V 1605 1772 50  0000 R CNN
-F 2 "" H 1600 1900 50  0001 C CNN
-F 3 "" H 1600 1900 50  0001 C CNN
-	1    1600 1900
+P 1600 1700
+F 0 "#PWR0110" H 1600 1450 50  0001 C CNN
+F 1 "GND" V 1605 1572 50  0000 R CNN
+F 2 "" H 1600 1700 50  0001 C CNN
+F 3 "" H 1600 1700 50  0001 C CNN
+	1    1600 1700
 	0    1    1    0   
 $EndComp
-Text GLabel 2400 1800 2    50   Input ~ 0
+Text GLabel 1600 1800 0    50   Input ~ 0
 D5-
-Text GLabel 1600 1700 0    50   Input ~ 0
+Text GLabel 2400 1900 2    50   Input ~ 0
 D4-
 Text GLabel 2400 1500 2    50   Input ~ 0
 D3+
-Text GLabel 2400 1600 2    50   Input ~ 0
+Text GLabel 1600 1600 0    50   Input ~ 0
 D2+
 Text GLabel 1600 1500 0    50   Input ~ 0
 D3-
-Text GLabel 1600 1600 0    50   Input ~ 0
+Text GLabel 2400 1600 2    50   Input ~ 0
 D2-
-Text GLabel 2400 1300 2    50   Input ~ 0
+Text GLabel 2400 1200 2    50   Input ~ 0
 D1+
-Text GLabel 2400 1400 2    50   Input ~ 0
-D0+
 Text GLabel 1600 1300 0    50   Input ~ 0
+D0+
+Text GLabel 1600 1200 0    50   Input ~ 0
 D1-
-Text GLabel 1600 1400 0    50   Input ~ 0
+Text GLabel 2400 1300 2    50   Input ~ 0
 D0-
 $Comp
 L power:+2V5 #PWR0114
@@ -274,7 +285,7 @@ AR Path="/5C4EBCE6/5C4E30D3+" Ref="C?"  Part="1"
 AR Path="/5C4E30D3" Ref="C101"  Part="1" 
 F 0 "C101" H 5315 1846 50  0000 L CNN
 F 1 "10uF" H 5315 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 5238 1650 50  0001 C CNN
+F 2 "Capacitors_SMD.pretty:C_1206" H 5238 1650 50  0001 C CNN
 F 3 "~" H 5200 1800 50  0001 C CNN
 	1    5200 1800
 	1    0    0    -1  
@@ -290,7 +301,7 @@ AR Path="/5C4EBCE6/5C4E30D9+" Ref="C?"  Part="1"
 AR Path="/5C4E30D9" Ref="C102"  Part="1" 
 F 0 "C102" H 5715 1846 50  0000 L CNN
 F 1 "10uF" H 5715 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 5638 1650 50  0001 C CNN
+F 2 "Capacitors_SMD.pretty:C_1206" H 5638 1650 50  0001 C CNN
 F 3 "~" H 5600 1800 50  0001 C CNN
 	1    5600 1800
 	1    0    0    -1  
@@ -306,7 +317,7 @@ AR Path="/5C4EBCE6/5C4E30DF" Ref="C?"  Part="1"
 AR Path="/5C4E30DF" Ref="C103"  Part="1" 
 F 0 "C103" H 6115 1846 50  0000 L CNN
 F 1 "10uF" H 6115 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 6038 1650 50  0001 C CNN
+F 2 "Capacitors_SMD.pretty:C_1206" H 6038 1650 50  0001 C CNN
 F 3 "~" H 6000 1800 50  0001 C CNN
 	1    6000 1800
 	1    0    0    -1  
@@ -430,7 +441,7 @@ AR Path="/5C4E887D/5C4E9819" Ref="C?"  Part="1"
 AR Path="/5C4EBCE6/5C4E9819" Ref="C?"  Part="1" 
 F 0 "C104" H 6350 1850 50  0000 L CNN
 F 1 "100n" H 6350 1650 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6588 1600 50  0001 C CNN
+F 2 "Capacitors_SMD.pretty:C_0603" H 6588 1600 50  0001 C CNN
 F 3 "~" H 6550 1750 50  0001 C CNN
 	1    6550 1750
 	1    0    0    -1  
@@ -530,33 +541,35 @@ U 1 1 5C536BEA
 P 1950 1800
 F 0 "J101" H 2000 2617 50  0000 C CNN
 F 1 "out" H 2000 2526 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x13_P1.27mm_Vertical_SMD" H 1950 1800 50  0001 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_2x13_P2.00mm_Vertical" H 1950 1800 50  0001 C CNN
 F 3 "~" H 1950 1800 50  0001 C CNN
 	1    1950 1800
 	1    0    0    -1  
 $EndComp
-Text GLabel 2400 1900 2    50   Input ~ 0
+Text GLabel 1600 2100 0    50   Input ~ 0
 Vref
 Wire Wire Line
-	1750 1300 1600 1300
-Wire Wire Line
 	1600 1400 1750 1400
+Wire Wire Line
+	1750 1200 1600 1200
+Wire Wire Line
+	1600 1300 1750 1300
 Wire Wire Line
 	1750 1500 1600 1500
 Wire Wire Line
 	1750 1600 1600 1600
 Wire Wire Line
-	1600 1700 1750 1700
-Wire Wire Line
 	1600 1800 1750 1800
+Wire Wire Line
+	1600 1900 1750 1900
 Wire Wire Line
 	1600 2300 1750 2300
 Wire Wire Line
 	1750 2400 1600 2400
 Wire Wire Line
-	1750 1900 1600 1900
+	1750 1700 1600 1700
 Wire Wire Line
-	2250 1900 2400 1900
+	1750 2100 1600 2100
 Wire Wire Line
 	2400 2200 2250 2200
 Wire Wire Line
@@ -568,25 +581,64 @@ Wire Wire Line
 Wire Wire Line
 	2400 2300 2250 2300
 Wire Wire Line
-	2250 1800 2400 1800
+	2250 1900 2400 1900
 Wire Wire Line
-	2400 1700 2250 1700
+	2400 1800 2250 1800
 Wire Wire Line
 	2250 1600 2400 1600
 Wire Wire Line
 	2400 1500 2250 1500
 Wire Wire Line
+	2250 1300 2400 1300
+Wire Wire Line
+	2400 1200 2250 1200
+Wire Wire Line
 	2250 1400 2400 1400
-Wire Wire Line
-	2400 1300 2250 1300
-Wire Wire Line
-	2250 1200 2400 1200
 Text GLabel 1550 4250 0    50   Input ~ 0
 Vref
 Text GLabel 3050 4250 0    50   Input ~ 0
 Vref
 Text GLabel 6550 1500 1    50   Input ~ 0
 Vref
+$Comp
+L power:GND #PWR0102
+U 1 1 5C5F148B
+P 2400 1700
+F 0 "#PWR0102" H 2400 1450 50  0001 C CNN
+F 1 "GND" V 2405 1572 50  0000 R CNN
+F 2 "" H 2400 1700 50  0001 C CNN
+F 3 "" H 2400 1700 50  0001 C CNN
+	1    2400 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2250 1700 2400 1700
+Wire Wire Line
+	1600 2000 1750 2000
+$Comp
+L power:GND #PWR0103
+U 1 1 5C600EBA
+P 1600 2000
+F 0 "#PWR0103" H 1600 1750 50  0001 C CNN
+F 1 "GND" V 1605 1872 50  0000 R CNN
+F 2 "" H 1600 2000 50  0001 C CNN
+F 3 "" H 1600 2000 50  0001 C CNN
+	1    1600 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5C600ED1
+P 1600 2200
+F 0 "#PWR0105" H 1600 1950 50  0001 C CNN
+F 1 "GND" V 1605 2072 50  0000 R CNN
+F 2 "" H 1600 2200 50  0001 C CNN
+F 3 "" H 1600 2200 50  0001 C CNN
+	1    1600 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1600 2200 1750 2200
 $Comp
 L Connector:Conn_01x01_Female J103
 U 1 1 5C604024
@@ -736,56 +788,4 @@ Wire Wire Line
 	5150 3800 5300 3800
 Wire Wire Line
 	5300 4000 5150 4000
-Wire Wire Line
-	1600 1200 1750 1200
-$Comp
-L power:GND #PWR0106
-U 1 1 5C3F979B
-P 1600 1200
-F 0 "#PWR0106" H 1600 950 50  0001 C CNN
-F 1 "GND" V 1605 1072 50  0000 R CNN
-F 2 "" H 1600 1200 50  0001 C CNN
-F 3 "" H 1600 1200 50  0001 C CNN
-	1    1600 1200
-	0    1    1    0   
-$EndComp
-$Comp
-L power:-2V5 #PWR?
-U 1 1 5C52E2DC
-P 1550 2000
-F 0 "#PWR?" H 1550 2100 50  0001 C CNN
-F 1 "-2V5" V 1565 2128 50  0000 L CNN
-F 2 "" H 1550 2000 50  0001 C CNN
-F 3 "" H 1550 2000 50  0001 C CNN
-	1    1550 2000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+2V5 #PWR?
-U 1 1 5C52E30F
-P 1550 2100
-F 0 "#PWR?" H 1550 1950 50  0001 C CNN
-F 1 "+2V5" V 1565 2228 50  0000 L CNN
-F 2 "" H 1550 2100 50  0001 C CNN
-F 3 "" H 1550 2100 50  0001 C CNN
-	1    1550 2100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+4V #PWR?
-U 1 1 5C52E342
-P 1550 2200
-F 0 "#PWR?" H 1550 2050 50  0001 C CNN
-F 1 "+4V" V 1565 2328 50  0000 L CNN
-F 2 "" H 1550 2200 50  0001 C CNN
-F 3 "" H 1550 2200 50  0001 C CNN
-	1    1550 2200
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1550 2000 1750 2000
-Wire Wire Line
-	1750 2100 1550 2100
-Wire Wire Line
-	1550 2200 1750 2200
 $EndSCHEMATC
