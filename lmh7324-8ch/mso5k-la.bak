@@ -35,7 +35,7 @@ Text GLabel 1600 2400 0    50   Input ~ 0
 D6-
 Text GLabel 2400 1700 2    50   Input ~ 0
 D5+
-Text GLabel 1600 1800 0    50   Input ~ 0
+Text GLabel 2400 1800 2    50   Input ~ 0
 D4+
 $Comp
 L power:GND #PWR0110
@@ -48,7 +48,7 @@ F 3 "" H 1600 1900 50  0001 C CNN
 	1    1600 1900
 	0    1    1    0   
 $EndComp
-Text GLabel 2400 1800 2    50   Input ~ 0
+Text GLabel 1600 1800 0    50   Input ~ 0
 D5-
 Text GLabel 1600 1700 0    50   Input ~ 0
 D4-
@@ -750,10 +750,10 @@ F 3 "" H 1600 1200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:-2V5 #PWR?
+L power:-2V5 #PWR0102
 U 1 1 5C52E2DC
 P 1550 2000
-F 0 "#PWR?" H 1550 2100 50  0001 C CNN
+F 0 "#PWR0102" H 1550 2100 50  0001 C CNN
 F 1 "-2V5" V 1565 2128 50  0000 L CNN
 F 2 "" H 1550 2000 50  0001 C CNN
 F 3 "" H 1550 2000 50  0001 C CNN
@@ -761,10 +761,10 @@ F 3 "" H 1550 2000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+2V5 #PWR?
+L power:+2V5 #PWR0103
 U 1 1 5C52E30F
 P 1550 2100
-F 0 "#PWR?" H 1550 1950 50  0001 C CNN
+F 0 "#PWR0103" H 1550 1950 50  0001 C CNN
 F 1 "+2V5" V 1565 2228 50  0000 L CNN
 F 2 "" H 1550 2100 50  0001 C CNN
 F 3 "" H 1550 2100 50  0001 C CNN
@@ -772,10 +772,10 @@ F 3 "" H 1550 2100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+4V #PWR?
+L power:+4V #PWR0105
 U 1 1 5C52E342
 P 1550 2200
-F 0 "#PWR?" H 1550 2050 50  0001 C CNN
+F 0 "#PWR0105" H 1550 2050 50  0001 C CNN
 F 1 "+4V" V 1565 2328 50  0000 L CNN
 F 2 "" H 1550 2200 50  0001 C CNN
 F 3 "" H 1550 2200 50  0001 C CNN
