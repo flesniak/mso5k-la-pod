@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:mso5k-la-cache
+LIBS:breakout-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -416,17 +416,17 @@ $EndComp
 $Comp
 L power:GND #PWR0119
 U 1 1 5C510A16
-P 1950 1250
-F 0 "#PWR0119" H 1950 1000 50  0001 C CNN
-F 1 "GND" V 1955 1122 50  0000 R CNN
-F 2 "" H 1950 1250 50  0001 C CNN
-F 3 "" H 1950 1250 50  0001 C CNN
-	1    1950 1250
+P 2000 1250
+F 0 "#PWR0119" H 2000 1000 50  0001 C CNN
+F 1 "GND" V 2005 1122 50  0000 R CNN
+F 2 "" H 2000 1250 50  0001 C CNN
+F 3 "" H 2000 1250 50  0001 C CNN
+	1    2000 1250
 	0    1    1    0   
 $EndComp
 Text GLabel 2900 1250 2    50   Input ~ 0
 D7+
-Text GLabel 2150 1350 0    50   Input ~ 0
+Text GLabel 2000 1350 0    50   Input ~ 0
 D7-
 Text GLabel 2900 1350 2    50   Input ~ 0
 D6+
@@ -445,22 +445,22 @@ F 3 "" H 2900 1650 50  0001 C CNN
 	1    2900 1650
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1900 1450 0    50   Input ~ 0
+Text GLabel 2000 1450 0    50   Input ~ 0
 D6-
-Text GLabel 2150 1550 0    50   Input ~ 0
+Text GLabel 2000 1550 0    50   Input ~ 0
 D15-
-Text GLabel 1900 1650 0    50   Input ~ 0
+Text GLabel 2000 1650 0    50   Input ~ 0
 D14-
 Wire Wire Line
-	1900 1650 2200 1650
+	2000 1650 2200 1650
 Wire Wire Line
-	2200 1550 2150 1550
+	2200 1550 2000 1550
 Wire Wire Line
-	1900 1450 2200 1450
+	2000 1450 2200 1450
 Wire Wire Line
-	2200 1350 2150 1350
+	2200 1350 2000 1350
 Wire Wire Line
-	1950 1250 2200 1250
+	2000 1250 2200 1250
 Wire Wire Line
 	2900 1650 2700 1650
 Wire Wire Line
@@ -503,45 +503,45 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0122
 U 1 1 5C3FA1F2
-P 2150 1750
-F 0 "#PWR0122" H 2150 1500 50  0001 C CNN
-F 1 "GND" V 2155 1622 50  0000 R CNN
-F 2 "" H 2150 1750 50  0001 C CNN
-F 3 "" H 2150 1750 50  0001 C CNN
-	1    2150 1750
+P 2000 1750
+F 0 "#PWR0122" H 2000 1500 50  0001 C CNN
+F 1 "GND" V 2005 1622 50  0000 R CNN
+F 2 "" H 2000 1750 50  0001 C CNN
+F 3 "" H 2000 1750 50  0001 C CNN
+	1    2000 1750
 	0    1    1    0   
 $EndComp
-Text GLabel 1900 1850 0    50   Input ~ 0
+Text GLabel 1950 1850 0    50   Input ~ 0
 D5-
-Text GLabel 2100 1950 0    50   Input ~ 0
+Text GLabel 1950 1950 0    50   Input ~ 0
 D4-
-Text GLabel 1900 2050 0    50   Input ~ 0
+Text GLabel 1950 2050 0    50   Input ~ 0
 D13-
-Text GLabel 2100 2150 0    50   Input ~ 0
+Text GLabel 1950 2150 0    50   Input ~ 0
 D12-
 Wire Wire Line
-	2100 2150 2200 2150
+	1950 2150 2200 2150
 Wire Wire Line
-	2200 2050 1900 2050
+	2200 2050 1950 2050
 Wire Wire Line
-	2100 1950 2200 1950
+	1950 1950 2200 1950
 Wire Wire Line
-	2200 1850 1900 1850
+	2200 1850 1950 1850
 Wire Wire Line
-	2150 1750 2200 1750
+	2000 1750 2200 1750
 $Comp
 L power:GND #PWR0123
 U 1 1 5C3FB264
-P 1900 2250
-F 0 "#PWR0123" H 1900 2000 50  0001 C CNN
-F 1 "GND" V 1905 2122 50  0000 R CNN
-F 2 "" H 1900 2250 50  0001 C CNN
-F 3 "" H 1900 2250 50  0001 C CNN
-	1    1900 2250
+P 2000 2250
+F 0 "#PWR0123" H 2000 2000 50  0001 C CNN
+F 1 "GND" V 2005 2122 50  0000 R CNN
+F 2 "" H 2000 2250 50  0001 C CNN
+F 3 "" H 2000 2250 50  0001 C CNN
+	1    2000 2250
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1900 2250 2200 2250
+	2000 2250 2200 2250
 Text GLabel 2900 2250 2    50   Input ~ 0
 D3+
 Text GLabel 2900 2350 2    50   Input ~ 0
@@ -571,22 +571,22 @@ Wire Wire Line
 	2900 2350 2700 2350
 Wire Wire Line
 	2700 2250 2900 2250
-Text GLabel 2100 2350 0    50   Input ~ 0
+Text GLabel 1950 2350 0    50   Input ~ 0
 D3-
-Text GLabel 1850 2450 0    50   Input ~ 0
+Text GLabel 1950 2450 0    50   Input ~ 0
 D2-
-Text GLabel 2100 2550 0    50   Input ~ 0
+Text GLabel 1950 2550 0    50   Input ~ 0
 D11-
-Text GLabel 1850 2650 0    50   Input ~ 0
+Text GLabel 1950 2650 0    50   Input ~ 0
 D10-
 Wire Wire Line
-	1850 2650 2200 2650
+	1950 2650 2200 2650
 Wire Wire Line
-	2200 2550 2100 2550
+	2200 2550 1950 2550
 Wire Wire Line
-	1850 2450 2200 2450
+	1950 2450 2200 2450
 Wire Wire Line
-	2200 2350 2100 2350
+	2200 2350 1950 2350
 Text GLabel 2900 2750 2    50   Input ~ 0
 D1+
 Text GLabel 2900 2850 2    50   Input ~ 0
@@ -619,32 +619,32 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0126
 U 1 1 5C401510
-P 2100 2750
-F 0 "#PWR0126" H 2100 2500 50  0001 C CNN
-F 1 "GND" V 2105 2622 50  0000 R CNN
-F 2 "" H 2100 2750 50  0001 C CNN
-F 3 "" H 2100 2750 50  0001 C CNN
-	1    2100 2750
+P 1950 2750
+F 0 "#PWR0126" H 1950 2500 50  0001 C CNN
+F 1 "GND" V 1955 2622 50  0000 R CNN
+F 2 "" H 1950 2750 50  0001 C CNN
+F 3 "" H 1950 2750 50  0001 C CNN
+	1    1950 2750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2100 2750 2200 2750
-Text GLabel 1850 2850 0    50   Input ~ 0
+	1950 2750 2200 2750
+Text GLabel 1950 2850 0    50   Input ~ 0
 D1-
-Text GLabel 2100 2950 0    50   Input ~ 0
+Text GLabel 1950 2950 0    50   Input ~ 0
 D0-
-Text GLabel 1850 3050 0    50   Input ~ 0
+Text GLabel 1950 3050 0    50   Input ~ 0
 D9-
-Text GLabel 2100 3150 0    50   Input ~ 0
+Text GLabel 1950 3150 0    50   Input ~ 0
 D8-
 Wire Wire Line
-	2100 3150 2200 3150
+	1950 3150 2200 3150
 Wire Wire Line
-	2200 3050 1850 3050
+	2200 3050 1950 3050
 Wire Wire Line
-	2100 2950 2200 2950
+	1950 2950 2200 2950
 Wire Wire Line
-	2200 2850 1850 2850
+	2200 2850 1950 2850
 $Comp
 L power:GND #PWR0127
 U 1 1 5C405113
@@ -684,17 +684,6 @@ Wire Wire Line
 	1850 3650 2200 3650
 Wire Wire Line
 	2700 3550 2900 3550
-$Comp
-L power:GND #PWR0130
-U 1 1 5C407DBE
-P 2900 3650
-F 0 "#PWR0130" H 2900 3400 50  0001 C CNN
-F 1 "GND" V 2905 3522 50  0000 R CNN
-F 2 "" H 2900 3650 50  0001 C CNN
-F 3 "" H 2900 3650 50  0001 C CNN
-	1    2900 3650
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2900 3650 2700 3650
 $Comp
@@ -749,10 +738,10 @@ Wire Wire Line
 	1900 3250 2200 3250
 Wire Wire Line
 	2200 3350 1900 3350
-Text GLabel 2800 3450 2    50   Input ~ 0
+Text GLabel 2900 3450 2    50   Input ~ 0
 Vref_8-15
 Wire Wire Line
-	2800 3450 2700 3450
+	2900 3450 2700 3450
 Text GLabel 1950 3450 0    50   Input ~ 0
 Vref_0-7
 Wire Wire Line
@@ -859,4 +848,63 @@ F 3 "" H 8550 2000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8550 1900 8550 2000
+Text GLabel 2900 3650 2    50   Input ~ 0
+Detect
+Text GLabel 10300 2500 2    50   Input ~ 0
+Detect
+$Comp
+L Device:R R101
+U 1 1 5C5DAFCF
+P 10150 2250
+F 0 "R101" H 10220 2296 50  0000 L CNN
+F 1 "NF" H 10220 2205 50  0000 L CNN
+F 2 "Resistors_SMD.pretty:R_0603" V 10080 2250 50  0001 C CNN
+F 3 "~" H 10150 2250 50  0001 C CNN
+	1    10150 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R102
+U 1 1 5C5DB037
+P 10150 2750
+F 0 "R102" H 10220 2796 50  0000 L CNN
+F 1 "0" H 10220 2705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10080 2750 50  0001 C CNN
+F 3 "~" H 10150 2750 50  0001 C CNN
+	1    10150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2400 10150 2500
+$Comp
+L power:GND #PWR0139
+U 1 1 5C5E81F5
+P 10150 3000
+F 0 "#PWR0139" H 10150 2750 50  0001 C CNN
+F 1 "GND" H 10155 2827 50  0000 C CNN
+F 2 "" H 10150 3000 50  0001 C CNN
+F 3 "" H 10150 3000 50  0001 C CNN
+	1    10150 3000
+	1    0    0    -1  
+$EndComp
+Connection ~ 10150 2500
+Wire Wire Line
+	10150 2500 10300 2500
+Wire Wire Line
+	10150 2500 10150 2600
+$Comp
+L power:+4V #PWR0130
+U 1 1 5C5F549A
+P 10150 2000
+F 0 "#PWR0130" H 10150 1850 50  0001 C CNN
+F 1 "+4V" V 10165 2128 50  0000 L CNN
+F 2 "" H 10150 2000 50  0001 C CNN
+F 3 "" H 10150 2000 50  0001 C CNN
+	1    10150 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2000 10150 2100
+Wire Wire Line
+	10150 2900 10150 3000
 $EndSCHEMATC
