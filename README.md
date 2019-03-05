@@ -10,6 +10,18 @@ The schematic and PCB is in kicad 5 format.
 
 There are a number of versions each in its own subdir:
 
+## lmh7324-8ch
+* 8 channel frontend pod
+* On a 4 layer board
+* With lmh7324 comparators
+* And a simple volt-meter that shows the threshold voltage.
+
+## breakout
+* Board for converting the 2x25 2.54 mm pitch connector on the scope to two 2x13 pin 1.27 mm pitch connectors.
+
+
+# Unfinished experiments
+
 ## lmh7322
 * 16 channel frontend pod
 * Pretty close clone of the original
