@@ -4,6 +4,14 @@ This is a reimplementation of the Logic Analyzer pod for the MSO5k scopes.
 
 The schematic and PCB is in kicad 5 format.
 
+# Errata
+
+* E1: The volt meter LEDs D407/D408 were paralelled with D405/D406,
+this makes it impossible to light them up individually.
+![fix e1](img/e1-fix.png "Fix for error 1")
+
+* E2: The ATtiny85 should not have a pulldown on ~RESET, it has a weak internal pullup, so remove R417
+
 
 # Versions
 
@@ -18,7 +26,6 @@ There are a number of versions each in its own subdir:
 
 ## breakout
 * Board for converting the 2x25 2.54 mm pitch connector on the scope to two 2x13 pin 1.27 mm pitch connectors.
-
 
 # Unfinished experiments
 
