@@ -368,4 +368,8 @@ Text Label 6100 3100 0    50   ~ 0
 PB3
 Text Notes 3800 4750 0    50   ~ 0
 Note: Programming via SOIC clip, which connects to:\nRESET (pin 1) \nSCK (pin 7) aka PB2\nMOSI (pin 5) aka PB0\nMISO (pin 6) aka PB1\nVCC (pin 8)\nGND (pin 4)
+Text GLabel 5400 3300 2    50   Input ~ 0
+~Reset
+Wire Wire Line
+	5400 3300 5250 3300
 $EndSCHEMATC
