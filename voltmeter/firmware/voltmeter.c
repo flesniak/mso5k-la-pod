@@ -4,6 +4,9 @@
 
 #include "board.h"
 #include "charlie.h"
+#include "adchelper.h"
+#include "softwareuart.h"
+
 
 void ledOff() {
   DDRB  = 0x00;
@@ -21,13 +24,33 @@ int main(void) {
 
   GPINPUT(VREF);
   led(1);
+  initADC();
+  UART_init();
 
+ 
+  uint16_t delay = 0;
+#ifndef SOFTWARE_TX
   int8_t li = 0;
   int8_t ld = 1;
-  uint16_t delay = 0;
+#endif
+  
   while (1) {
     wdt_reset();
-    
+
+    UART_tx_str("Test: ");
+    //unsigned int adc = getOsADC(0);
+    uint16_t adc = 4727;
+    UART_tx_uint16(adc);
+    UART_tx_str("\r\n");
+
+    delay = 0;
+    while (delay++ < 50000) {
+  
+    }
+
+
+#ifndef SOFTWARE_TX
+   
     if (delay++ > 5000) {
       delay = 0;
 
@@ -49,6 +72,7 @@ int main(void) {
     } else if (pwm == 1) {
       ledOff();
     }
+#endif    
   }
 }
 
