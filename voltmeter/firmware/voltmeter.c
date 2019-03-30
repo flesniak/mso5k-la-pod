@@ -1,10 +1,11 @@
 #include <avr/wdt.h> 
 #include <stdio.h>
 #include <util/delay.h>
+#include <stdlib.h>
 
 #include "board.h"
 #include "charlie.h"
-#include "adchelper.h"
+#include "adc.h"
 #include "softwareuart.h"
 
 
@@ -19,59 +20,87 @@ void led(uint8_t n) {
   PORTB = mask >> 4;
 }
 
+uint16_t voltageToLeds(int16_t mv) {
+
+  int16_t diff = 9999;
+  uint8_t best = -1;
+  
+  for (uint8_t i=0;i<10;i++) {
+    int16_t d = mv-LP[i].mv;
+    if (abs(d) < abs(diff)) {
+      best = i;
+      diff = d;
+    }
+  }
+  
+  uint16_t leds = _BV(best);
+  
+  if (abs(diff) > 10) {
+    if (best < 9) {
+      leds |= _BV(best+1);
+    }
+    if (best > 1) {
+      leds |= _BV(best-1);
+    }
+  }
+  
+  return leds;
+}
+
+const int16_t VEE = -2525;
+const int16_t VCC = 2375;
+
 int main(void) {
   wdt_enable(WDTO_1S);
 
   GPINPUT(VREF);
   led(1);
-  initADC();
-  UART_init();
-
+  startADC(VREF_ADC); // Starts the ADC interrupt in free-running mode
  
-  uint16_t delay = 0;
 #ifndef SOFTWARE_TX
-  int8_t li = 0;
-  int8_t ld = 1;
+  uint8_t ledCount = 0;
+#else
+  UART_init();
+  UART_tx_str("Boot\r\n");
 #endif
+  
+  uint16_t delay = 0;
+  const int32_t FULL_RANGE = VCC-VEE;
   
   while (1) {
     wdt_reset();
 
+    uint16_t adc = getADC();
+    int32_t voltage = ((FULL_RANGE * adc) >> 10) + VEE;
+    uint16_t leds = voltageToLeds(voltage);
+        
+#ifdef SOFTWARE_TX
+    
     UART_tx_str("Test: ");
-    //unsigned int adc = getOsADC(0);
-    uint16_t adc = 4727;
-    UART_tx_uint16(adc);
+    UART_tx_int16(voltage);
+    UART_tx_str(" ");
+    UART_tx_uint16(leds);
     UART_tx_str("\r\n");
 
     delay = 0;
-    while (delay++ < 50000) {
-  
-    }
+    while (delay++ < 50000) { }
+    
+#else
+    
+    uint8_t pwm = delay++ & 0x01f; 
 
-
-#ifndef SOFTWARE_TX
-   
-    if (delay++ > 5000) {
-      delay = 0;
-
-      li += ld;
-      if (li > 9) {
-	li = 8;
-	ld = -1;
-      } if (li < 0) {
-	li = 1;
-	ld = 1;
+    if (pwm == 0) {
+      if (++ledCount >= 10) {
+        ledCount = 0;
+      }
+      if (leds & _BV(ledCount)) {
+        led(ledCount);
       }
       
-    }
-
-    // Turn down the intensity to a reasonable level.
-    uint8_t pwm = delay & 0x01f; 
-    if (pwm == 0) {
-      led(li);
     } else if (pwm == 1) {
       ledOff();
     }
+    
 #endif    
   }
 }

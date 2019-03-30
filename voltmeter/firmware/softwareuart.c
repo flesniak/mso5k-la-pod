@@ -48,6 +48,15 @@ void UART_tx_uint16(uint16_t integer) {
   }  
 }
 
+void UART_tx_int16(int16_t integer) {
+  if (integer >= 0) {
+    UART_tx_uint16(integer);
+  } else {
+    UART_tx_str("-");
+    UART_tx_uint16(-integer);    
+  }
+  
+}
 
 
 void UART_init() {
@@ -67,7 +76,7 @@ void UART_init() {
     increasing or decreasing the value by 1 or 2 */
 
   // When the internal 8 MHz clock is divided by 8, then 12 is a better value
-  OCR0A = 12;
+  OCR0A = 103;
   //enable interrupts
   sei();
 }

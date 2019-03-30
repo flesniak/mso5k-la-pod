@@ -14,5 +14,5 @@ PROGRAM_BIT_TIME  = 5
 readfuses:
 	avrdude $(AVR_PROGRAMMER) -p $(AVR) -B 100 -U lfuse:r:-:h -U hfuse:r:-:h
 fuses:
-	avrdude $(AVR_PROGRAMMER) -p $(AVR) -B 100 -U lfuse:w:0x62:m -U hfuse:w:0xdf:m
+	avrdude $(AVR_PROGRAMMER) -p $(AVR) -B 100 -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m
 
