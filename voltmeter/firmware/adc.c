@@ -1,4 +1,6 @@
 #include "adc.h"
+#include "charlie.h"
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
@@ -13,15 +15,13 @@ void startADC(uint8_t input) {
   DIDR0 = input << 2; // Disable digital input buffer on the selected ADC input
 }
 
-#define ADC_OVERSAMPLES 4
-
-volatile uint16_t oversampled;
+uint16_t oversampled;
 
 // This gets called via an IRQ whenever a conversion has finished
 ISR(ADC_vect) {
-    uint16_t raw = ADCL | ADCH << 8;    
-    int16_t delta = raw - (oversampled>>ADC_OVERSAMPLES);    
-    oversampled += delta;    
+  uint16_t raw = ADCL | ADCH << 8;    
+  int16_t delta = raw - (oversampled>>ADC_OVERSAMPLES);    
+  oversampled += delta;
 }
 
 uint16_t getADC() {
@@ -29,5 +29,13 @@ uint16_t getADC() {
   uint16_t unscaled = oversampled;
   sei();
   
-  return unscaled >> ADC_OVERSAMPLES;
+  return unscaled;
+}
+
+void suspendADC() {
+  ADCSRA &=~ _BV(ADIE);  
+}
+
+void resumeADC() {
+  ADCSRA |= _BV(ADIE);  
 }
