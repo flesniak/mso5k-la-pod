@@ -21,4 +21,4 @@
 #define VREF GPB4
 #define VREF_ADC 2
 
-#define SOFTWARE_TX GPB0
+//#define SOFTWARE_TX GPB0
