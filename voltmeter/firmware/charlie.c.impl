@@ -6,6 +6,12 @@ typedef struct {
   int16_t mv;   // The actual voltage in mv of the Vref
 } LedPoint;
 
+/* The led byte contains two nybles:
+
+ Bit 0-4 the bits that need to be driven, this is what ends up in the DDR register.
+ Bit 5-7 the bit that need to be set, this is what ends up in the PORT register.
+*/
+
 // The LED bit mask and value and the center voltage in mv value for each LED
 #define LEDS 10
 
