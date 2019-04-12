@@ -61,7 +61,7 @@ int main(void) {
       
       if (isCalibrated(&calibration)) {
         uint16_t lm = 0;
-        for (uint8_t i=0;i<led;i++) {
+        for (uint8_t i=0;i<=led;i++) {
           lm |= _BV(i);
         }
         setCharlieLeds(lm);
