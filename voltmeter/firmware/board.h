@@ -5,20 +5,25 @@
 /*
 | Define         | AVR | Pin | Description |
 |----------------|-----|-----|-------------|
-| LED0           | PB0 | 5   | LED0  |
-| LED1           | PB1 | 6   | LED1  |
-| LED2           | PB2 | 7   | LED2  |
-| LED3           | PB3 | 2   | LED3  |
-| VREF           | PB4 | 3   | Vref  |
-|                | PB5 | 1   | Reset |
+| LED0           | PA0 | 13  | LED0        |
+| LED1           | PA1 | 12  | LED1        |
+| LED2           | PA2 | 11  | LED2        |
+| LED3           | PA3 | 10  | LED3        |
+| LED4           | PB0 | 2   | LED3        |
+| VREF0          | PA5 | 8   | VrefA       |
+| VREF1          | PA7 | 6   | VrefB       |
+|                | PB3 | 4   | Reset       |
 */
 
-#define LED0  GPB0
-#define LED1  GPB1
-#define LED2  GPB2
-#define LED3  GPB3
+#define LED0  GPA0
+#define LED1  GPA1
+#define LED2  GPA2
+#define LED3  GPA3
+#define LED4  GPB0
 
-#define VREF GPB4
-#define VREF_ADC 2
+#define VREF0 GPA5
+#define VREF1 GPA7
+#define VREF0_ADC 5
+#define VREF1_ADC 7
 
 //#define SOFTWARE_TX GPB0

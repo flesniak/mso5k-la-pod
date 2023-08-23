@@ -5,7 +5,7 @@ F_CPU             ?= 8000000
 SLEEP_10_MS_COUNT ?= 79
 PROGRAM_BIT_TIME  ?= 1
 
-# These are the different programmers that I use with avrdude, to choose one, create a ~/.makefile 
+# These are the different programmers that I use with avrdude, to choose one, create a ~/.makefile
 # that sets the variable, that way different users can have different programmers
 
 #AVR_PROGRAMMER = -c usbtiny -P usb
@@ -29,7 +29,7 @@ SIZE=avr-size
 
 DISABLE_WARNINGS = -Wno-unused-function -Wno-overlength-strings
 
-CFLAGS  += $(DISABLE_WARNINGS) -pedantic-errors -Werror -mcall-prologues -mmcu=$(AVR) -std=gnu11 -g
+CFLAGS  += $(DISABLE_WARNINGS) -pedantic-errors -Werror -mcall-prologues -mmcu=$(AVR) -std=gnu11 -g --param=min-pagesize=0
 CFLAGS  += -I$(FW)
 
 
@@ -41,7 +41,8 @@ CFLAGS += -fdata-sections -ffunction-sections
 CFLAGS += -funsigned-char
 CFLAGS += -funsigned-bitfields
 CFLAGS += -fpack-struct
-CFLAGS += -fshort-enums 
+CFLAGS += -fshort-enums
+CFLAGS += -mtiny-stack -Wl,--gc-sections
 
 
 
@@ -55,7 +56,7 @@ CFLAGS += -D F_CPU=$(F_CPU)
 CPPFLAGS=-fno-exceptions
 
 LDFLAGS = -lc -mmcu=$(AVR) -Wl,--gc-sections -Wl,-Map,$(PROJ).map
-#LDFLAGS += -Wl,--print-gc-sections 
+#LDFLAGS += -Wl,--print-gc-sections
 LDFLAGS += -Wl,--relax
 
 #LDFLAGS += -L/usr/lib/avr/lib
@@ -66,7 +67,7 @@ program : bin
 
 bin : $(PROJ)-o.hex
 
-# Notice: We must include this particular libm if if we want to use float at all: /usr/lib/avr/lib/libm.a 
+# Notice: We must include this particular libm if if we want to use float at all: /usr/lib/avr/lib/libm.a
 
 # This uses whole-program optimization so there's only one compilation unit:
 #$(PROJ).hex : $(CSRC) $(CPSRC) $(INTERMEDIATE)

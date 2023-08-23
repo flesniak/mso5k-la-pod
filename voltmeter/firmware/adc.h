@@ -1,13 +1,13 @@
 #pragma once
 #include <stdint.h>
 
+#define ADC_INIT_SAMPLES 2
 #define ADC_OVERSAMPLES 4
+#define ADC_OVERSAMPLES_SHIFT 2
 #define ADC_BITS 10
+#define ADC_CHANNELS 2
 
-void startADC(uint8_t input);
-
-uint16_t getADC(void);
-
-void suspendADC(void);
-
-void resumeADC(void);
+void startADC();
+void suspendADC();
+void resumeADC();
+uint16_t getADC(uint8_t channel);

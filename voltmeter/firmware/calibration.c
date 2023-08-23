@@ -7,45 +7,44 @@
 #define EEPROM_ADDRESS (void *)0
 const uint16_t EEPROM_MAGIC=0x5354;
 
-void setDefaultCalibration(Calibration *cal) { 
+void setDefaultCalibration(Calibration *cal) {
   const int16_t VEE=-2500;
   const int16_t VCC= 2300;
-  
+
   cal->slope = VCC-VEE;
-  cal->slope <<= FIXED_BITS-ADC_OVERSAMPLES-ADC_BITS;
+  cal->slope <<= FIXED_BITS-ADC_OVERSAMPLES_SHIFT-ADC_BITS;
   cal->offset = VEE;
   cal->offset <<= FIXED_BITS;
 }
 
 void readCalibrationOrSetDefault(Calibration *cal) {
-  eeprom_read_block(cal, EEPROM_ADDRESS, sizeof(Calibration));
+  // eeprom_read_block(cal, EEPROM_ADDRESS, sizeof(Calibration));
   if (!isCalibrated(cal)) {
     setDefaultCalibration(cal);
-  }  
+  }
 }
 
 uint8_t isCalibrated(Calibration *cal) {
   return cal->magic == EEPROM_MAGIC;
 }
 
-
 int16_t adcToMiliVolt(Calibration *cal, uint16_t adc) {
-  return (adc*cal->slope + cal->offset) >> FIXED_BITS;
+  return (cal->slope * adc + cal->offset) >> FIXED_BITS;
 }
 
 void storeCalibration(Calibration *cal) {
   cal->magic = EEPROM_MAGIC;
-  eeprom_update_block(cal, EEPROM_ADDRESS, sizeof(Calibration));  
+  // eeprom_update_block(cal, EEPROM_ADDRESS, sizeof(Calibration));
 }
 
 void storeCalibrationFromReferenceVoltages(Calibration *cal,
-                                           uint16_t lowCalAdc, int16_t lowCalVoltage, 
+                                           uint16_t lowCalAdc, int16_t lowCalVoltage,
                                            uint16_t highCalAdc, int16_t highCalVoltage) {
-  
+
   uint16_t deltaADC = highCalAdc-lowCalAdc;
-  int32_t deltaVoltage = highCalVoltage-lowCalVoltage;          
+  int32_t deltaVoltage = highCalVoltage-lowCalVoltage;
   deltaVoltage <<= FIXED_BITS;
-  deltaVoltage /= deltaADC;                    
+  deltaVoltage /= deltaADC;
   cal->slope = deltaVoltage;
 
   int32_t offsetVoltage = lowCalVoltage;
@@ -53,7 +52,7 @@ void storeCalibrationFromReferenceVoltages(Calibration *cal,
   offsetVoltage -= lowCalAdc*deltaVoltage;
   // offsetVoltage is now the voltage in mv at ADC=0 << FIXED_BITS
   cal->offset = offsetVoltage;
-  
+
   storeCalibration(cal);
 }
 
