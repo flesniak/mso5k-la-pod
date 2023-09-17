@@ -17,16 +17,16 @@ extern Calibration calibration;
 
 const LedEntry LP[LEDS] = {
   // {LedsA}, {LedsB}, Vref
-  {{{DRIVE(0,1), HIGH(1)}, {DRIVE(4,1), HIGH(1)}},  4000}, // > 4V
-  {{{DRIVE(0,1), HIGH(0)}, {DRIVE(4,1), HIGH(4)}},  3700}, // 3.7V
-  {{{DRIVE(1,2), HIGH(2)}, {DRIVE(4,0), HIGH(0)}},  2500}, // 2.5V
-  {{{DRIVE(1,2), HIGH(1)}, {DRIVE(4,0), HIGH(4)}},  1650}, // 1.65V
-  {{{DRIVE(2,3), HIGH(3)}, {DRIVE(0,2), HIGH(2)}},  1400}, // 1.4V
-  {{{DRIVE(2,3), HIGH(2)}, {DRIVE(0,2), HIGH(0)}},  1200}, // 1.2V
-  {{{DRIVE(3,4), HIGH(4)}, {DRIVE(0,3), HIGH(0)}},   900}, // 0.9V
-  {{{DRIVE(3,4), HIGH(3)}, {DRIVE(0,3), HIGH(3)}},    00}, // 0V
-  {{{DRIVE(4,2), HIGH(2)}, {DRIVE(1,3), HIGH(1)}}, -1300}, // -1.3V
-  {{{DRIVE(4,2), HIGH(4)}, {DRIVE(1,3), HIGH(3)}}, -2000}, // < -2V
+  {{{DRIVE(0,1), HIGH(1)}, {DRIVE(4,1), HIGH(1)}},  400}, // > 4V
+  {{{DRIVE(0,1), HIGH(0)}, {DRIVE(4,1), HIGH(4)}},  370}, // 3.7V
+  {{{DRIVE(1,2), HIGH(2)}, {DRIVE(4,0), HIGH(0)}},  250}, // 2.5V
+  {{{DRIVE(1,2), HIGH(1)}, {DRIVE(4,0), HIGH(4)}},  165}, // 1.65V
+  {{{DRIVE(2,3), HIGH(3)}, {DRIVE(0,2), HIGH(2)}},  140}, // 1.4V
+  {{{DRIVE(2,3), HIGH(2)}, {DRIVE(0,2), HIGH(0)}},  120}, // 1.2V
+  {{{DRIVE(3,4), HIGH(4)}, {DRIVE(0,3), HIGH(0)}},   90}, // 0.9V
+  {{{DRIVE(3,4), HIGH(3)}, {DRIVE(0,3), HIGH(3)}},    0}, // 0V
+  {{{DRIVE(4,2), HIGH(2)}, {DRIVE(1,3), HIGH(1)}}, -130}, // -1.3V
+  {{{DRIVE(4,2), HIGH(4)}, {DRIVE(1,3), HIGH(3)}}, -200}, // < -2V
 };
 
 #undef DRIVE
@@ -35,7 +35,7 @@ const LedEntry LP[LEDS] = {
 // Turns off all leds
 static void ledOff() {
   DDRA  = 0;
-  PORTA = 0;
+  PORTA = DEFAULT_PORTA;
   DDRB  = 0;
   PORTB = 0;
 }
@@ -47,7 +47,7 @@ static void ledOn(const LedPoint* lp) {
 
   DDRA  = ddr & 0xf;
   DDRB  = ddr>>4 & 0x1;
-  PORTA = port & 0xf;
+  PORTA = (port & 0xf) | DEFAULT_PORTA;
   PORTB = port>>4 & 0x1;
 }
 
@@ -69,11 +69,15 @@ void setCharlieLedOff(uint8_t channel) {
   state[channel] = 0;
 }
 
+const LedPoint* getCharlieStatus(uint8_t channel) {
+  return state[channel];
+}
+
 const LedPoint* voltageToLeds(uint8_t channel, int16_t mv) {
   int16_t diff = 10000;
   const LedEntry* best = 0;
 
-  for (uint8_t i=0; i<LEDS-1; i++) {
+  for (uint8_t i=0; i<LEDS; i++) {
     int16_t d = mv-LP[i].mv;
     if (abs(d) < abs(diff)) {
       best = &LP[i];

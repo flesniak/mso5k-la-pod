@@ -8,8 +8,8 @@
 const uint16_t EEPROM_MAGIC=0x5354;
 
 void setDefaultCalibration(Calibration *cal) {
-  const int16_t VEE=-2500;
-  const int16_t VCC= 2300;
+  const int16_t VEE=-2462;
+  const int16_t VCC= 2242;
 
   cal->slope = VCC-VEE;
   cal->slope <<= FIXED_BITS-ADC_OVERSAMPLES_SHIFT-ADC_BITS;
@@ -18,7 +18,7 @@ void setDefaultCalibration(Calibration *cal) {
 }
 
 void readCalibrationOrSetDefault(Calibration *cal) {
-  // eeprom_read_block(cal, EEPROM_ADDRESS, sizeof(Calibration));
+  eeprom_read_block(cal, EEPROM_ADDRESS, sizeof(Calibration));
   if (!isCalibrated(cal)) {
     setDefaultCalibration(cal);
   }
@@ -34,13 +34,12 @@ int16_t adcToMiliVolt(Calibration *cal, uint16_t adc) {
 
 void storeCalibration(Calibration *cal) {
   cal->magic = EEPROM_MAGIC;
-  // eeprom_update_block(cal, EEPROM_ADDRESS, sizeof(Calibration));
+  eeprom_update_block(cal, EEPROM_ADDRESS, sizeof(Calibration));
 }
 
 void storeCalibrationFromReferenceVoltages(Calibration *cal,
                                            uint16_t lowCalAdc, int16_t lowCalVoltage,
                                            uint16_t highCalAdc, int16_t highCalVoltage) {
-
   uint16_t deltaADC = highCalAdc-lowCalAdc;
   int32_t deltaVoltage = highCalVoltage-lowCalVoltage;
   deltaVoltage <<= FIXED_BITS;

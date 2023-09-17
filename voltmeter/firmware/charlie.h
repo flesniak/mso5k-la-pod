@@ -22,3 +22,4 @@ void setCharlieLed(uint8_t channel, uint8_t ledIdx);
 void setCharlieLedPoint(uint8_t channel, const LedPoint* lp);
 void setCharlieLedOff(uint8_t channel);
 const LedPoint* voltageToLeds(uint8_t channel, int16_t mv);
+const LedPoint* getCharlieStatus(uint8_t channel);
